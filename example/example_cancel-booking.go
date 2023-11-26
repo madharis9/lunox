@@ -32,4 +32,5 @@ func main() {
 	}
 
 	fmt.Println("Expected change state:" + sm.Fsm.Current())
+
 }
