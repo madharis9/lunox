@@ -1,30 +1,24 @@
 package main
 
-import (
-	"fmt"
-
-	statemachine "github.com/kikan/fsm/state_machine"
-)
-
 func main() {
-	sm, err := statemachine.NewFiniteState("booking", "cancel-booking")
-	if err != nil {
-		panic(err)
-	}
+	// sm, err := statemachine.NewFiniteState("booking", statemachine.BookingPlacedEvent)
+	// if err != nil {
+	// 	panic(err)
+	// }
 
-	fmt.Println("1:" + sm.Fsm.Current())
+	// fmt.Println("1:" + sm.Fsm.Current())
 
-	currentState := sm.Fsm.Current()
-	err = sm.ChangeState("create-booking")
-	if err != nil {
-		fmt.Println("err here ", err)
-	}
-	dest := sm.Fsm.Current()
-	if currentState == dest {
-		fmt.Println("error")
-	}
+	// currentState := sm.Fsm.Current()
+	// err = sm.ChangeState("cancel-booking")
+	// if err != nil {
+	// 	fmt.Println("err here ", err)
+	// }
+	// dest := sm.Fsm.Current()
+	// if currentState == dest {
+	// 	fmt.Println("error")
+	// }
 
-	fmt.Println("2:" + sm.Fsm.Current())
+	// fmt.Println("2:" + sm.Fsm.Current())
 
 	// fsm := fsm.NewFSM(
 	// 	"idle",
